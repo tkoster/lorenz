@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lorenz</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Lorenz</h1>
+    <div>
+      <form class="input-form">
+        <div class="field">
+          <label for="rho-input">ρ</label>
+          <input id="rho-input" value="28" />
+        </div>
+        <div class="field">
+          <label for="sigma-input">σ</label>
+          <input id="sigma-input" value="10" />
+        </div>
+        <div class="field">
+          <label for="beta-input">β</label>
+          <input id="beta-input" value="8/3" />
+        </div>
+        <button id="calculate-button" type="button">Calculate</button>
+        <button id="reset-button" type="reset">Reset</button>
+      </form>
+    </div>
+    <canvas id="output-canvas" width="800" height="600"></canvas>
+    <script src="main.js"></script>
+  </body>
+</html>

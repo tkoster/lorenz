@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  padding: 0 2em;
+}
+
+.field {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+form label {
+  margin-left: 2em;
+  width: 2em;
+}
+
+form input {
+  width: 6em;
+}
+
+form button {
+  margin-bottom: 2em;
+}
+
+#output-canvas {
+  border: 1px solid #ccc;
+}
+
