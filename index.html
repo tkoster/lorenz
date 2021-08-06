@@ -7,25 +7,64 @@
   </head>
   <body>
     <h1>Lorenz</h1>
-    <div>
-      <form class="input-form">
-        <div class="field">
-          <label for="rho-input">ρ</label>
-          <input id="rho-input" value="28" />
-        </div>
-        <div class="field">
-          <label for="sigma-input">σ</label>
-          <input id="sigma-input" value="10" />
-        </div>
-        <div class="field">
-          <label for="beta-input">β</label>
-          <input id="beta-input" value="8/3" />
-        </div>
-        <button id="calculate-button" type="button">Calculate</button>
-        <button id="reset-button" type="reset">Reset</button>
-      </form>
+    <p>Click and drag in the chart to change the viewpoint. Use the mouse wheel to change the zoom level.</p>
+    <div class="main">
+      <div class="menu">
+        <form id="parameters-form">
+          <fieldset>
+            <legend>Differential equation</legend>
+            <div class="field">
+              <label for="rho-input">ρ</label>
+              <input id="rho-input" type="text" value="28" />
+            </div>
+            <div class="field">
+              <label for="sigma-input">σ</label>
+              <input id="sigma-input" type="text" value="10" />
+            </div>
+            <div class="field">
+              <label for="beta-input">β</label>
+              <input id="beta-input" type="text" value="8/3" />
+            </div>
+            <div class="field">
+              <label for="maxt-input">max t</label>
+              <input id="maxt-input" type="text" value="40" />
+            </div>
+            <div class="field">
+              <label for="dt-input">dt</label>
+              <input id="dt-input" type="text" value="0.001" />
+            </div>
+            <div class="buttons">
+              <button id="calculate-button" type="submit">Apply</button>
+              <button id="reset-button" type="reset">Reset</button>
+            </div>
+          </fieldset>
+        </form>
+        <form id="display-form">
+          <fieldset>
+            <legend>Display</legend>
+            <div class="field">
+              <input id="show-grid-input" type="checkbox" />
+              <label for="show-grid-input" class="checkbox">Show grid</label>
+            </div>
+            <div class="field">
+              <input id="show-axes-input" type="checkbox" />
+              <label for="show-axes-input" class="checkbox">Show axes guide</label>
+            </div>
+            <div class="field">
+              <input id="show-stats-input" type="checkbox" />
+              <label for="show-stats-input" class="checkbox">Show stats</label>
+            </div>
+            <div class="field">
+              <input id="use-pointer-lock-input" type="checkbox" checked />
+              <label for="use-pointer-lock-input" class="checkbox">Locked mouse drag</label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="canvas">
+        <canvas id="output-canvas" width="800" height="600"></canvas>
+      </div>
     </div>
-    <canvas id="output-canvas" width="800" height="600"></canvas>
     <script src="main.js"></script>
   </body>
 </html>
